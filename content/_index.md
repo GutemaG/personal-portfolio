@@ -17,6 +17,9 @@ toc: false
 
 Hi, I'm Birhanu, a passionate developer specializing in building modern, scalable web applications. With a strong foundation in React, TypeScript, and Python, I bring ideas to life through clean and efficient code. I'm constantly exploring new technologies and enjoy solving complex problems to deliver impactful digital experiences. My goal is to create intuitive and performant applications that leave a lasting impression.
 
+<br />
+{{< link-button text="Download CV" link="Birhanu-Guidsa-Resume.pdf" style="padding: 10px; border-radius: 2%" target="_blank" >}}
+
 ### Education
 
 * **MSc Degree**
