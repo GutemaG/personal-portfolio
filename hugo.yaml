@@ -3,6 +3,10 @@ languageCode: en-us
 title: Birhanu G.
 theme: hextra
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 
 markup:
   # allow raw html
