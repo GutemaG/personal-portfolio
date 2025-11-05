@@ -6,7 +6,7 @@ toc: false
 ---
 
 
-<img src="/birhanu.jpg" alt="Birhanu G." style="border-radius: 50%; object-fit: cover; width:312px;height:312px" />
+<img src="images/birhanu.jpg" alt="Birhanu G." style="border-radius: 50%; object-fit: cover; width:312px;height:312px" />
 
 ### Hello, I'm
 # Birhanu G.
