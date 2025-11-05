@@ -50,6 +50,7 @@ params:
   navbar:
     displayTitle: true
     displayLogo: false
+    width: normal
   footer:
     enable: false
     displayCopyright: false
@@ -61,6 +62,9 @@ params:
   editURL:
     enable: true
     base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+
+  page:
+    width: wide
 
   blog:
     list:
