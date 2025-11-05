@@ -1,0 +1,68 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Birhanu G.
+theme: hextra
+
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    # - name: About
+    #   pageRef: /about
+    #   weight: 2
+    # - name: Tutorial
+    #   url: "/tutorial"
+    #   weight: 3
+
+    # - name: Search
+    #   weight: 4
+    #   params:
+    #     type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/GutemaG"
+      params:
+        icon: github
+    - name: LinkedIn
+      weight: 5
+      url: "https://www.linkedin.com/in/birhanugudisa/"
+      params:
+        icon: linkedin
+    - name: Theme Toggle
+      params:
+        type: theme-toggle
+        label: false
+
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  footer:
+    enable: false
+    displayCopyright: false
+    displayPoweredBy: false
+  theme:
+    displayToggle: false
+    displayCopyright: false
+
+  editURL:
+    enable: true
+    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+
+  blog:
+    list:
+      displayTags: true
+      pagerSize: 5
+      theme:
+        displayCopyright: false
+  toc:
+    displayTags: true
