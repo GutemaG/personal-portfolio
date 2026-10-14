@@ -1,7 +1,7 @@
 # personal-portfolio
 
 Birhanu G.'s personal website, built with [Next.js](https://nextjs.org) and deployed to GitHub Pages at
-https://gutemag.github.io/personal-portfolio/.
+https://birhanu.dev (custom domain set in the repo's Pages settings).
 
 ## Run locally
 
