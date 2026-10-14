@@ -3,14 +3,12 @@ title: 'Thirteen Months of Sunshine: How My Ethiopian Date Converter Works'
 date: '2026-10-14T23:30:00+03:00'
 description: 'How the Ethiopian calendar differs from the Gregorian one, and the day-counting math inside my Python package that converts between them.'
 tags: ['python', 'ethiopia', 'calendars']
-draft: true
+draft: false
 ---
 
 As I write this, it is October 14, 2026 on most of the world's calendars. Here in Ethiopia it is also Tikimt 4, 2019.
 
 That second date isn't a typo. Ethiopia runs on its own calendar, and almost every piece of software built here has to deal with it: payroll, billing cycles, government forms, school records. Most libraries only speak Gregorian, so sooner or later every Ethiopian developer ends up writing a converter. I wrote mine as a small Python package, [py-ethiopian-date-converter](https://github.com/GutemaG/py_ethiopain_date_converter), and this post walks through how it works.
-
-<!-- TODO(Birhanu): one or two sentences on why you built it, e.g. which project needed it. -->
 
 ## How the Ethiopian calendar works
 
