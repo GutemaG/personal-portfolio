@@ -26,7 +26,8 @@ export const skills = [
   { title: "GO", icon: "golang" },
 ];
 
-export type Project = { title: string; link: string; image?: string; description: string };
+// Set imageFit: "contain" for logos that should not be cropped.
+export type Project = { title: string; link: string; image?: string; imageFit?: "contain"; description: string };
 
 export const projects: Project[] = [
   {
@@ -47,6 +48,7 @@ export const projects: Project[] = [
     title: "Utility Hub",
     link: "https://utility.ethioqr.app",
     image: "images/utility-hub.png",
+    imageFit: "contain",
     description:
       "Your everyday digital Swiss Army Knife — A sleek, fast bundles essential calculators, converters, and generators for daily life, health, finance, tech, and more.",
   },
