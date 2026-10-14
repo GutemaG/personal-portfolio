@@ -9,13 +9,25 @@ export const profile = {
     "Hi, I'm Birhanu, a passionate developer specializing in building modern, scalable web applications. With a strong foundation in React, TypeScript, and Python, I bring ideas to life through clean and efficient code. I'm constantly exploring new technologies and enjoy solving complex problems to deliver impactful digital experiences. My goal is to create intuitive and performant applications that leave a lasting impression.",
 };
 
+// Dates are "YYYY-MM".
 export const education = [
-  { degree: "MSc Degree", school: "Adama Science and Technology University (ASTU)" },
-  { degree: "BSc Degree", school: "Adama Science and Technology University (ASTU)" },
+  {
+    degree: "MSc, Computer Science and Engineering",
+    school: "Adama Science and Technology University (ASTU)",
+    start: "2021-09",
+    end: "2023-09",
+  },
+  {
+    degree: "BSc, Computer Science and Engineering",
+    school: "Adama Science and Technology University (ASTU)",
+    start: "2016-09",
+    end: "2021-09",
+  },
 ];
 
 // `icon` is a key in src/data/icons.json.
 export const skills = [
+  { title: "C# (ASP.NET)", icon: "csharp" },
   { title: "Python", icon: "python" },
   { title: "Django", icon: "django" },
   { title: "FAST API", icon: "fast-api" },
