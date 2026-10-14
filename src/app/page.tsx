@@ -2,6 +2,8 @@ import { profile, education, skills, projects, contacts, social } from "@/conten
 import icons from "@/data/icons.json";
 import SocialIcon from "@/components/SocialIcon";
 import { asset } from "@/lib/paths";
+import { experience } from "@/content/experience";
+import { duration, formatRange } from "@/lib/dates";
 
 const iconSvgs = icons as Record<string, string>;
 
@@ -14,6 +16,11 @@ function initials(title: string) {
     .map((w) => w[0].toUpperCase())
     .join("");
 }
+
+// Newest first, by each role's start and by each company's latest role.
+const companies = experience
+  .map((c) => ({ ...c, roles: [...c.roles].sort((a, b) => b.start.localeCompare(a.start)) }))
+  .sort((a, b) => b.roles[0].start.localeCompare(a.roles[0].start));
 
 export default function Home() {
   return (
@@ -55,10 +62,45 @@ export default function Home() {
               <div key={e.degree} className="card edu">
                 <strong>{e.degree}</strong>
                 <span>{e.school}</span>
+                <span className="edu-dates">{formatRange(e.start, e.end)}</span>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      <section id="experience" className="section">
+        <h2>💼 Experience</h2>
+        <ol className="timeline">
+          {companies.map((c) => (
+            <li key={c.company} className={`timeline-company${c.roles.some((r) => !r.end) ? " current" : ""}`}>
+              <div className="timeline-head">
+                <h3>{c.url ? <a href={c.url} target="_blank" rel="noreferrer">{c.company}</a> : c.company}</h3>
+                <span>{[c.type, c.location].filter(Boolean).join(" · ")}</span>
+              </div>
+              <ol className="timeline-roles">
+                {c.roles.map((r) => (
+                  <li key={r.title + r.start} className="card timeline-role">
+                    <div className="timeline-role-top">
+                      <strong>{r.title}</strong>
+                      <span>
+                        {formatRange(r.start, r.end)} · {duration(r.start, r.end)}
+                      </span>
+                    </div>
+                    {r.summary && <p>{r.summary}</p>}
+                    {r.tech && r.tech.length > 0 && (
+                      <ul className="tags">
+                        {r.tech.map((t) => (
+                          <li key={t}>{t}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section id="skills" className="section">
