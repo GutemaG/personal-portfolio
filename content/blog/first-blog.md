@@ -2,9 +2,6 @@
 date: '2025-11-05T17:06:14+03:00'
 draft: true
 title: 'First Blog'
-breadcrumbs: true
-page:
-  width: wide
 ---
 # 🧰 UtilityHub — All-in-One Calculator & Converter Suite
 
