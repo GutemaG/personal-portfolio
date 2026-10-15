@@ -40,11 +40,6 @@ export const experience: Company[] = [
     ],
   },
   {
-    company: "Microverse",
-    location: "Remote",
-    roles: [{ title: "Full-stack Developer", start: "2022-11", end: "2023-11", tech: ["JavaScript"] }],
-  },
-  {
     company: "Ethiopia Oromia Science and Technology Authority (OSTA)",
     type: "Internship",
     location: "Addis Ababa, Ethiopia · On-site",

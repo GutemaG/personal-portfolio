@@ -58,7 +58,7 @@ export const projects: Project[] = [
   },
   {
     title: "Utility Hub",
-    link: "https://utility.ethioqr.app",
+    link: "https://utility-hub-drab.vercel.app/",
     image: "images/utility-hub.png",
     imageFit: "contain",
     description:
