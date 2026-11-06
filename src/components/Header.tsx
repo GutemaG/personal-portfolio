@@ -11,6 +11,7 @@ export default function Header() {
           {profile.name}
         </Link>
         <div className="nav-links">
+          <Link href="/toolbelt/">Toolbelt</Link>
           <Link href="/blog/">Blog</Link>
           <a href={social.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="icon-button">
             <SocialIcon name="github" />
