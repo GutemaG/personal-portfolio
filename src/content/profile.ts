@@ -43,6 +43,13 @@ export type Project = { title: string; link: string; image?: string; imageFit?: 
 
 export const projects: Project[] = [
   {
+    title: "Toolbelt",
+    link: "https://birhanu.dev/toolbelt/",
+    image: "images/toolbelt/world-clock.png",
+    description:
+      "A free, native macOS menu bar app with 22 tools in one place, including a launcher, clipboard history, screenshots, notes, timers and a world clock. Built with Swift and SwiftUI.",
+  },
+  {
     title: "Water Utility Management Information System (WUMIS)",
     link: "https://wumis.et",
     image: "images/wumis1.png",
