@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { asset } from "@/lib/paths";
 import { profile } from "@/content/profile";
-import { buildCommand, faqs, links, quarantineCommand, shortcuts, toolGroups } from "@/content/toolbelt";
+import { buildCommand, compatibility, faqs, links, quarantineCommand, shortcuts, toolGroups } from "@/content/toolbelt";
 import ToolShowcase from "./ToolShowcase";
 import CopyCommand from "./CopyCommand";
 import "./toolbelt.css";
@@ -186,6 +186,10 @@ export default function ToolbeltPage() {
             <h3>When it does go online</h3>
             <ul>
               <li>
+                <strong>Updates</strong> asks GitHub once a day whether there&apos;s a new version. You can turn this off
+                in Settings.
+              </li>
+              <li>
                 <strong>Info</strong> asks <a href="https://www.ipify.org" target="_blank" rel="noreferrer">ipify</a> for
                 your public IP address.
               </li>
@@ -238,11 +242,43 @@ export default function ToolbeltPage() {
               <CopyCommand command={buildCommand} />
               <p>
                 This builds the app, installs it to <code>~/Applications</code> and opens it. It takes about 30 seconds,
-                and there are no third-party dependencies.
+                and its only dependency is Sparkle, which installs updates.
               </p>
               <a href={links.repo} target="_blank" rel="noreferrer">
                 Read the code on GitHub →
               </a>
+            </div>
+          </div>
+          <div className="tb-compat">
+            <h3>Which Mac runs which tool</h3>
+            <p className="tb-muted">
+              Most tools work on any supported Mac. These depend on the hardware, and Settings &gt; Compatibility checks
+              your own Mac.
+            </p>
+            <div className="tb-compat-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Tool</th>
+                    <th scope="col">MacBook Pro</th>
+                    <th scope="col">MacBook Air</th>
+                    <th scope="col">iMac</th>
+                    <th scope="col">Mac mini, Studio, Pro</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {compatibility.map((row) => (
+                    <tr key={row.name}>
+                      <th scope="row">{row.name}</th>
+                      {row.cells.map((cell, i) => (
+                        <td key={i} className={cell === "No" ? "tb-muted" : undefined}>
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
