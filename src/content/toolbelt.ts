@@ -144,6 +144,13 @@ cd Toolbelt
 
 export const quarantineCommand = "xattr -dr com.apple.quarantine /Applications/Toolbelt.app";
 
+export const compatibility: { name: string; cells: string[] }[] = [
+  { name: "Knock", cells: ["M2 or later, M1 Pro, M1 Max", "M2 or later", "No", "No"] },
+  { name: "Camera", cells: ["Yes", "Yes", "Yes", "With a connected camera or iPhone"] },
+  { name: "Battery in System and Info", cells: ["Yes", "Yes", "No", "No"] },
+  { name: "Fans in System", cells: ["Yes", "No", "Yes", "Yes"] },
+];
+
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Is it really free?",
@@ -155,7 +162,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Which Macs does it run on?",
-    a: "The download needs an Apple silicon Mac with macOS 26 or later. Intel Macs haven't been tested. Knock also needs a MacBook with a motion sensor: M2 or later, M1 Pro or M1 Max.",
+    a: "Any Apple silicon Mac, M1 or later, with macOS 26 or later. Intel Macs aren't supported. The table above shows the few tools that depend on your hardware, and Settings > Compatibility checks your own Mac.",
   },
   {
     q: "Why does it ask for so many permissions?",
@@ -163,7 +170,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Does it update itself?",
-    a: "Not yet. To update, download the new version and replace the old app, or pull the latest code and run the build again.",
+    a: "Yes, from version 0.3. It checks for a new version once a day and installs it with one click, and you can turn that off in Settings. Versions 0.1 and 0.2 can't update themselves, so download the latest version once.",
   },
   {
     q: "How do I remove it?",

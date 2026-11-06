@@ -191,6 +191,15 @@ main.container:has(> .tb) { max-width: none; padding: 0; }
 }
 .tb-command button:hover { background: rgb(255 255 255 / 0.22); }
 
+.tb-compat { margin-top: clamp(2rem, 4vw, 3rem); }
+.tb-compat h3 { margin: 0; font-size: 1.35rem; }
+.tb-compat > p { margin: 0.3rem 0 1.15rem; line-height: 1.5; max-width: 42rem; }
+.tb-compat-scroll { overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 0.75rem; }
+.tb-compat table { width: 100%; min-width: 40rem; border-collapse: collapse; font-size: 0.925rem; line-height: 1.4; }
+.tb-compat th, .tb-compat td { padding: 0.8rem 1rem; text-align: left; vertical-align: top; border-top: 1px solid var(--border); }
+.tb-compat thead th { border-top: 0; font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.tb-compat tbody th { font-weight: 600; }
+
 /* Questions */
 .tb-faq-wrap { max-width: 52rem; }
 .tb-faq-wrap .tb-heading { margin-bottom: 1.25rem; }
